@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<!-- ICS2O Programming Unit4-03-HTML-Movie -->
+<html>
+  <head>
+    
+    <!-- Meta Data -->
+    <meta charset="utf-8">
+    <meta name="description" content="Movie Age Standards, with JS">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Shyla Oommen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon[1].png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32[1].png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16[1].png">
+    <link rel="manifest" href="/fav_index/site[1].webmanifest">
+    
+    <!-- Style Sheet and Google's MDL -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-indigo.min.css"> 
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Movie Age Standard Checker, with JavaScript</title>
+  </head>
+  <body>
+    
+    <!-- To use Google's MDL + Path to JS File -->
+    
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    
+    <!-- Header -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Movie Age Standard Checker</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <center>
+              <h5>This program will tell you what movies you can see based on the age rating standards in the U.S., given your age.
+</h5><img src="./images/popcorn_movie.jpg" alt="Movie with Popcorn Image" width="15%" height="auto">
+              </center>
+            </th>
+          </tr>
+        </table>
+        
+        <!-- Numeric Text Field for user age -->
+        <form action="#">
+          <p>Age:</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              id="user-age"
+              step="1"
+            />
+            <label class="mdl-textfield__label" for="user-guess">Eg. 4...</label>
+          </div>
+        </form>
+        
+        <!-- Raised button with ripple -->
+        <center>
+          <br>
+          <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="MovieStandardResponse()"
+        >
+          Submit Age
+          </button>
+        </center> 
+        <br /> 
+        <!-- Display movie standards based on age to user -->
+        <p>
+          <div id="display-results">
+            <div id="response"></div>
+          </div>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
